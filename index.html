@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <style>
+        /* Configuración global */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Evitar el scroll */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        /* Contenedor del chat */
+        .chat-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ajuste del cuadro de chat para pantallas grandes y móviles */
+        .chat-box {
+            width: 90%; /* Reducir un poco el ancho en móviles */
+            height: 90%; /* Reducir un poco el alto en móviles */
+            max-width: 600px; /* Máximo ancho en pantallas grandes */
+            max-height: 90vh; /* Limitar el tamaño al alto visible de la pantalla */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px; /* Bordes redondeados */
+            overflow: hidden;
+        }
+
+        iframe {
+            border: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Ajustes específicos para pantallas móviles en orientación vertical */
+        @media (max-width: 768px) {
+            .chat-box {
+                width: 95%; /* Ajustar un poco más en móviles */
+                height: 95%; /* Dar algo más de espacio en móviles */
+                max-width: 95vw; /* Asegurar que no se desborde en móviles */
+                max-height: 95vh; /* Asegurar que no se desborde en altura */
+                border-radius: 10px; /* Bordes redondeados también en móviles */
+            }
+
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box">
+            <iframe src="https://copilotstudio.microsoft.com/environments/Default-2dd0dbd5-e196-426c-8379-d937445ceb05/bots/cr334_copilotoStern/canvas?__version__=2&enableFileAttachment=false" frameborder="0"></iframe>
+        </div>
+    </div>
+</body>
+</html>
